@@ -1,4 +1,4 @@
-package com.xelar.legayd.myfirstgit.adapters
+package com.xelar.legayd.myfirstgit.presentation.adapters
 
 import android.util.Log
 import android.view.LayoutInflater

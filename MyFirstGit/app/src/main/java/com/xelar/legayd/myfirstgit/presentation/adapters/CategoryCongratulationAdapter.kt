@@ -1,9 +1,8 @@
-package com.xelar.legayd.myfirstgit.adapters
+package com.xelar.legayd.myfirstgit.presentation.adapters
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.view.menu.ActionMenuItemView
 import androidx.recyclerview.widget.RecyclerView
 import com.xelar.legayd.myfirstgit.R
 import com.xelar.legayd.myfirstgit.databinding.CategoryItemBinding

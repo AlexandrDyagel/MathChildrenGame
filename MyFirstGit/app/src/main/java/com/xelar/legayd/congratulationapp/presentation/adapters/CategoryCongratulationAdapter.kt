@@ -1,12 +1,12 @@
-package com.xelar.legayd.myfirstgit.presentation.adapters
+package com.xelar.legayd.congratulationapp.presentation.adapters
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.xelar.legayd.myfirstgit.R
-import com.xelar.legayd.myfirstgit.databinding.CategoryItemBinding
-import com.xelar.legayd.myfirstgit.domain.CategoryCongratulation
+import com.xelar.legayd.congratulationapp.R
+import com.xelar.legayd.congratulationapp.databinding.CategoryItemBinding
+import com.xelar.legayd.congratulationapp.domain.entities.CategoryCongratulation
 
 class CategoryCongratulationAdapter:
     RecyclerView.Adapter<CategoryCongratulationAdapter.CategoryViewHolder>() {

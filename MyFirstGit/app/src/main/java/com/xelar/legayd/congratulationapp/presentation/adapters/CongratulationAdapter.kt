@@ -1,4 +1,4 @@
-package com.xelar.legayd.myfirstgit.presentation.adapters
+package com.xelar.legayd.congratulationapp.presentation.adapters
 
 import android.util.Log
 import android.view.LayoutInflater
@@ -6,10 +6,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.xelar.legayd.myfirstgit.R
-import com.xelar.legayd.myfirstgit.databinding.CongratulationItemBinding
-import com.xelar.legayd.myfirstgit.domain.Congratulation
-import com.xelar.legayd.myfirstgit.presentation.diffutils.CongratulationItemDiffCallback
+import com.xelar.legayd.congratulationapp.R
+import com.xelar.legayd.congratulationapp.databinding.CongratulationItemBinding
+import com.xelar.legayd.congratulationapp.domain.entities.Congratulation
+import com.xelar.legayd.congratulationapp.presentation.diffutils.CongratulationItemDiffCallback
 
 class CongratulationAdapter : ListAdapter<Congratulation, RecyclerView.ViewHolder>(
     CongratulationItemDiffCallback()

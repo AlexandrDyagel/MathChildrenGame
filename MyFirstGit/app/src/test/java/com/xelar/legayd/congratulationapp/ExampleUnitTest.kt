@@ -1,4 +1,4 @@
-package com.xelar.legayd.myfirstgit
+package com.xelar.legayd.congratulationapp
 
 import org.junit.Test
 

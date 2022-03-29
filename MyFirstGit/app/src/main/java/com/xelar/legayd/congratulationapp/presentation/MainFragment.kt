@@ -1,4 +1,4 @@
-package com.xelar.legayd.myfirstgit.presentation
+package com.xelar.legayd.congratulationapp.presentation
 
 import android.app.NotificationChannel
 import android.app.NotificationManager
@@ -14,10 +14,10 @@ import androidx.core.app.NotificationCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
-import com.xelar.legayd.myfirstgit.R
-import com.xelar.legayd.myfirstgit.presentation.adapters.CategoryCongratulationAdapter
-import com.xelar.legayd.myfirstgit.presentation.adapters.CongratulationAdapter
-import com.xelar.legayd.myfirstgit.databinding.FragmentMainBinding
+import com.xelar.legayd.congratulationapp.R
+import com.xelar.legayd.congratulationapp.databinding.FragmentMainBinding
+import com.xelar.legayd.congratulationapp.presentation.adapters.CategoryCongratulationAdapter
+import com.xelar.legayd.congratulationapp.presentation.adapters.CongratulationAdapter
 
 class MainFragment : Fragment() {
 
@@ -58,12 +58,7 @@ class MainFragment : Fragment() {
                 )
             }
         categoryAdapter.onCategoryClickListener = {
-            Toast.makeText(
-                context,
-                "Нажата категория '${it.name}'",
-                Toast.LENGTH_SHORT
-            ).show()
-            showNotification(it.name)
+            binding.rvSubCategoryCongrat.adapter = categoryAdapter
         }
     }
 
@@ -102,6 +97,7 @@ class MainFragment : Fragment() {
     private fun initRV() = with(binding) {
         rvCategoryCongratulations.adapter = categoryAdapter
         rvCongratulations.adapter = congratulationAdapter
+
     }
 
     override fun onDestroyView() {

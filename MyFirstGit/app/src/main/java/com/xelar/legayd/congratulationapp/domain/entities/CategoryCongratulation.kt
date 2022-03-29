@@ -1,4 +1,4 @@
-package com.xelar.legayd.myfirstgit.domain
+package com.xelar.legayd.congratulationapp.domain.entities
 
 data class CategoryCongratulation(
     val id: Int,

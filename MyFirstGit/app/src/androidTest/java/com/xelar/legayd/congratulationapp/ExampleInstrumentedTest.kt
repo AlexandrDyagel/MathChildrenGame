@@ -1,4 +1,4 @@
-package com.xelar.legayd.myfirstgit
+package com.xelar.legayd.congratulationapp
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

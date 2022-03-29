@@ -1,6 +1,8 @@
-package com.xelar.legayd.myfirstgit.domain
+package com.xelar.legayd.congratulationapp.domain.repositories
 
 import androidx.lifecycle.LiveData
+import com.xelar.legayd.congratulationapp.domain.entities.CategoryCongratulation
+import com.xelar.legayd.congratulationapp.domain.entities.Congratulation
 
 interface CongratulationRepository {
 

@@ -1,10 +1,10 @@
-package com.xelar.legayd.myfirstgit.data
+package com.xelar.legayd.congratulationapp.data
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import com.xelar.legayd.myfirstgit.domain.CategoryCongratulation
-import com.xelar.legayd.myfirstgit.domain.Congratulation
-import com.xelar.legayd.myfirstgit.domain.CongratulationRepository
+import com.xelar.legayd.congratulationapp.domain.entities.CategoryCongratulation
+import com.xelar.legayd.congratulationapp.domain.entities.Congratulation
+import com.xelar.legayd.congratulationapp.domain.repositories.CongratulationRepository
 
 object CongratulationRepositoryImpl : CongratulationRepository {
 

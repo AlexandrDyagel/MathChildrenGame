@@ -1,7 +1,7 @@
-package com.xelar.legayd.myfirstgit.presentation.diffutils
+package com.xelar.legayd.congratulationapp.presentation.diffutils
 
 import androidx.recyclerview.widget.DiffUtil
-import com.xelar.legayd.myfirstgit.domain.Congratulation
+import com.xelar.legayd.congratulationapp.domain.entities.Congratulation
 
 class CongratulationItemDiffCallback: DiffUtil.ItemCallback<Congratulation>() {
     override fun areItemsTheSame(oldItem: Congratulation, newItem: Congratulation) =

@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/congratulationItemFragment"
-        android:name="com.xelar.legayd.myfirstgit.presentation.CongratulationItemFragment"
+        android:name="com.xelar.legayd.congratulationapp.presentation.CongratulationItemFragment"
         android:label="fragment_congratulation_item"
         tools:layout="@layout/fragment_congratulation_item" >
         <argument
@@ -17,12 +17,15 @@
     </fragment>
     <fragment
         android:id="@+id/mainFragment"
-        android:name="com.xelar.legayd.myfirstgit.presentation.MainFragment"
+        android:name="com.xelar.legayd.congratulationapp.presentation.MainFragment"
         android:label="fragment_main"
         tools:layout="@layout/fragment_main" >
         <action
             android:id="@+id/action_mainFragment_to_congratulationItemFragment"
             app:destination="@id/congratulationItemFragment"
-            app:launchSingleTop="false" />
+            app:enterAnim="@animator/nav_default_enter_anim"
+            app:exitAnim="@animator/nav_default_exit_anim"
+            app:popEnterAnim="@animator/nav_default_pop_enter_anim"
+            app:popExitAnim="@animator/nav_default_pop_exit_anim" />
     </fragment>
 </navigation>

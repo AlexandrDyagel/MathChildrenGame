@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_screens"
+    android:orientation="vertical"
+    tools:context=".presentation.fragments.CustomSettingsFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:fillViewport="true"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/buttonAddSettings"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        tools:layout_editor_absoluteX="-69dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_body">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilTitle"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/et_hint_title"
+                app:endIconMode="clear_text"
+                app:startIconDrawable="@drawable/ic_title"
+                app:errorTextAppearance="@style/error_message"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:inputType="textShortMessage|textCapWords"
+                    android:maxLength="50"
+                    android:maxLines="1"
+                    android:textSize="16sp"
+                    app:fontFamily="@font/comfortaa_bold"
+                    app:layout_constraintStart_toStartOf="parent" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilMaxSumValue"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="@string/et_hint_max_sum_value"
+                app:endIconMode="clear_text"
+                app:startIconDrawable="@drawable/ic_summ"
+                app:errorTextAppearance="@style/error_message"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tilTitle">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etMaxSumValue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="3"
+                    android:textSize="16sp"
+                    app:fontFamily="@font/comfortaa_bold"
+                    app:layout_constraintStart_toStartOf="parent" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilMinCountOfRightAnswers"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="@string/et_hint_min_count_of_right_answers"
+                app:endIconMode="clear_text"
+                app:errorTextAppearance="@style/error_message"
+                app:suffixText="отв."
+                app:startIconDrawable="@drawable/ic_answer"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tilMaxSumValue">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etMinCountOfRightAnswers"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="3"
+                    android:textSize="16sp"
+                    app:endIconMode="clear_text"
+                    app:fontFamily="@font/comfortaa_bold"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilMinPercentOfRightAnswers"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="@string/et_hint_min_percent_of_right_answers"
+                app:endIconMode="clear_text"
+                app:startIconDrawable="@drawable/ic_min_percent"
+                app:errorTextAppearance="@style/error_message"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tilMinCountOfRightAnswers"
+                app:suffixText="%">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etMinPercentOfRightAnswers"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:textSize="16sp"
+                    app:fontFamily="@font/comfortaa_bold"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilGameTimeInSeconds"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="@string/et_hint_game_time"
+                app:endIconMode="clear_text"
+                app:errorTextAppearance="@style/error_message"
+                app:fontFamily="@font/comfortaa_bold"
+                app:startIconDrawable="@drawable/ic_time"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tilMinPercentOfRightAnswers"
+                app:suffixText="сек.">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etGameTimeInSeconds"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:maxLength="4"
+                    android:textSize="16sp"
+                    app:fontFamily="@font/comfortaa_bold"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/cbWithoutTimeGame"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="8dp"
+                android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+                android:checkMarkTint="@android:color/holo_green_light"
+                android:fontFamily="@font/comfortaa_bold"
+                android:gravity="center"
+                android:text="@string/et_hint_without_time_game"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tilGameTimeInSeconds" />
+
+            <Spinner
+                android:id="@+id/spinner"
+                style="@style/Widget.AppCompat.Spinner.DropDown"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                app:circularflow_defaultRadius="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/cbWithoutTimeGame"
+                app:layout_constraintBottom_toBottomOf="@+id/cbWithoutTimeGame"
+                app:layout_constraintTop_toTopOf="@+id/cbWithoutTimeGame"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/buttonAddSettings"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_add_custom_settings"
+        android:text="@string/button_add_settings"
+        app:fontFamily="@font/comfortaa_bold"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/button_green"
+        app:layout_constraintBottom_toTopOf="@+id/buttonListCustomSettings"
+
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonListCustomSettings"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_custom_settings"
+        android:background="@drawable/bg_button_user_settings"
+        android:text="@string/button_my_list_custom_settings"
+        app:fontFamily="@font/comfortaa_bold"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

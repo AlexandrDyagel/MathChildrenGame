@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_screens"
+    tools:context=".presentation.fragments.ChooseLevelFragment">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/margin_body"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/choose_level_title"
+            android:textSize="24sp"
+            app:fontFamily="@font/montserrat_alternates_bold" />
+
+        <Button
+            android:id="@+id/buttonLevelTest"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_level_height"
+            android:textColor="@color/white"
+            app:fontFamily="@font/comfortaa_bold"
+            android:backgroundTint="@color/button_very_easy"
+            android:text="@string/button_test_level"
+            android:visibility="visible"
+
+            />
+
+        <Button
+            android:id="@+id/buttonLevelVeryEasy"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_level_height"
+            android:textColor="@color/white"
+            app:fontFamily="@font/comfortaa_bold"
+            android:backgroundTint="@color/button_very_easy"
+            android:text="@string/button_very_easy_level" />
+
+        <Button
+            android:id="@+id/buttonLevelEasy"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_level_height"
+            android:textColor="@color/white"
+            app:fontFamily="@font/comfortaa_bold"
+            android:backgroundTint="@android:color/holo_green_light"
+            android:text="@string/button_easy_level" />
+
+        <Button
+            android:id="@+id/buttonLevelNormal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_level_height"
+            android:textColor="@color/white"
+            app:fontFamily="@font/comfortaa_bold"
+            android:backgroundTint="@android:color/holo_orange_light"
+            android:text="@string/button_normal_level" />
+
+        <Button
+            android:id="@+id/buttonLevelHard"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_level_height"
+            android:textColor="@color/white"
+            app:fontFamily="@font/comfortaa_bold"
+            android:backgroundTint="@color/button_hard"
+            android:text="@string/button_hard_level" />
+
+        <Button
+            android:id="@+id/buttonLevelVeryHard"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_level_height"
+            android:textColor="@color/white"
+            app:fontFamily="@font/comfortaa_bold"
+            android:backgroundTint="@android:color/holo_red_light"
+            android:text="@string/button_very_hard_level" />
+
+        <Button
+            android:id="@+id/buttonLevelCustom"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_level_height"
+            android:textColor="@color/white"
+            app:fontFamily="@font/comfortaa_bold"
+            android:backgroundTint="@color/button_custom_level"
+            android:text="@string/button_level_custom" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <include
+        android:id="@+id/incBottomSheet"
+        layout="@layout/bottom_sheet_desc_rewards" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

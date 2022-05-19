@@ -1,0 +1,105 @@
+<resources>
+    <string name="app_name">Учим Состав числа</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="question_mark">\?</string>
+    <string name="game_over">Конец игры</string>
+    <string name="button_understand">Понятно</string>
+    <string name="choose_level_title">Выберите уровень:</string>
+
+    <!--Названия уровней сложности-->
+    <string name="button_test_level">Тестовый</string>
+    <string name="button_easy_level">Легкий</string>
+    <string name="button_normal_level">Нормальный</string>
+    <string name="button_hard_level">Тяжелый</string>
+    <string name="button_very_hard_level">Очень тяжелый</string>
+
+    <!-- <string name="required_answers">Необходимое количество правильных ответов: %s</string>
+    <string name="score_answers">Ваш счет: %s</string>
+    <string name="required_percentage">Необходимый процент правильных ответов: %s</string>
+     <string name="score_percentage">Процент правильных ответов: %s</string> -->
+    <string name="required_answers">из %s</string>
+    <string name="score_answers">%s</string>
+    <string name="required_percentage">%% из %s%%</string>
+    <string name="score_percentage">%s</string>
+    <string name="progress_answers">Правильных ответов %s из %s</string>
+    <string name="button_retry">Попробовать снова</string>
+    <string name="image_welcome_game">Добро пожаловать в игру</string>
+    <string name="tv_title_text">Учим Состав числа</string>
+    <string name="tv_rules_of_game">Правила игры: перед Вами будет три фигуры, две снизу и одна сверху,
+    в двух из них будут числа. Необходимо, чтобы сумма чисел из двух нижних фигур была равна числу в верхней фигуре,
+    для этого нужно вставить недостающее число.\n\nНапример: в верхнем круге число 8, в одном из
+    нижних знак вопроса, а в другом число 5. Значит на месте вопросительного знака должно быть
+    число 3, потому что 5 + 3 = 8.\n\nНа первый взгляд может кажется не понятно, но давайте уже приступим
+    к выполнению заданий. Удачи!</string>
+
+    <string name="desc_rules_onboarding_screens">Перед Вами будет три фигуры, две снизу и одна сверху,
+    в двух из них будут числа. Необходимо, чтобы сумма чисел из двух нижних фигур была равна числу в верхней фигуре,
+    для этого нужно вставить недостающее число.</string>
+    <string name="desc_answers_onboarding_screens">Будет предложено шесть вариантов ответов с произвольными числами. Подумай
+    и выбери правильный ответ.\n\nНо не забывай, что все задании на время и нужно отвечать как можно быстрее!</string>
+    <string name="bottom_sheet_rating_rules1">За победу в игре Вы будете получать звездочки, количество которых
+        зависит от уровня сложности игры.\n\nЗа определенное их количество, будете получать соответствующие этому
+        звания в личном рейтинге.</string>
+
+    <string name="image_logo_description">Состав числа</string>
+    <string name="link_rating_bottom_sheet"><u>Мой рейтинг</u></string>
+    <string name="bottom_sheet_schema_status">(%s/%s)</string>
+    <string name="bottom_sheet_getting_stars">Получение звезд</string>
+    <string name="bottom_sheet_rating_rules2">Очень легкий уровень 1</string>
+    <string name="bottom_sheet_rating_rules3">Легкий уровень 2</string>
+    <string name="bottom_sheet_rating_rules4">Нормальный уровень 4</string>
+    <string name="bottom_sheet_rating_rules5">Тяжелый уровень 6</string>
+    <string name="bottom_sheet_rating_rules6">Очень тяжелый уровень 10</string>
+    <string name="button_very_easy_level">Очень легкий</string>
+    <string name="bottom_sheet_rating_all_right_answers">Всего правильных ответов</string>
+    <string name="button_level_custom">Настраиваемый</string>
+    <string name="et_hint_min_count_of_right_answers">Мин. кол-во правильных ответов</string>
+    <string name="error_message_edit_text">Значение не должно быть пустым</string>
+    <string name="error_message_edit_text_min_value">Сумма не должна быть меньше 7</string>
+    <string name="error_message_edit_text_max_value">Время игры не должно превышать 3600 секунд</string>
+    <string name="et_hint_min_percent_of_right_answers">Мин. процент правильных ответов</string>
+    <string name="et_hint_max_sum_value">Mакс. значение суммы</string>
+    <string name="et_hint_game_time">Продолжительность игры</string>
+    <string name="et_hint_without_time_game">Без времени игры</string>
+    <string name="button_my_list_custom_settings">Мои настройки</string>
+    <string name="button_add_settings">Добавить</string>
+    <string name="et_hint_title">Любое название</string>
+    <string name="snack_bar_add_custom_settings">Настройки добавлены</string>
+    <string name="user_custom_settings_title">Мои настройки:</string>
+    <string name="textview_button_next">Далее</string>
+    <string name="image_desc_check">check</string>
+    <string name="textview_button_finish">Понятно</string>
+    <string name="button_share">Поделиться</string>
+    <string name="share_screenshot_chooser_title">Выберите получателя</string>
+    <string name="tv_empty_list_my_settings">Упс! Ничего нет :(\nДобавьте свои настройки</string>
+    <string name="all_right_answers">Правильных ответов</string>
+    <string name="percentage_right_answers">Процент правильных ответов</string>
+    <string name="desc_image_rating_status">Статус</string>
+    <string name="desc_image_rating_star">Звездочка</string>
+    <string name="button_start_game">Начать игру</string>
+    <string name="tv_max_sum_value">Макс. значение суммы: %s</string>
+    <string name="tv_min_count_of_right_answers">Мин. кол-во правильных ответов: %s</string>
+    <string name="tv_min_percent_of_right_answers">Мин. процент правильных ответов: %s%%</string>
+    <string name="tv_game_time_in_seconds">Продолжительность игры: %s сек.</string>
+    <string name="infinity_game_time">беск.</string>
+
+
+    <!-- Статусы рейтинга --> Статусы рейтинга
+    <string-array name="statuses">
+        <item>Новичок</item>
+        <item>Молодчинка</item>
+        <item>Знайка</item>
+        <item>Умничка</item>
+        <item>Крутыш</item>
+        <item>Молоток</item>
+        <item>Озорник</item>
+        <item>Ботаник</item>
+        <item>Ученый</item>
+        <item>Гений</item>
+
+    </string-array>
+
+
+</resources>

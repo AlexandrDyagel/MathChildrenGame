@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="button_level_height">70dp</dimen>
+    <dimen name="height_desc_rewards_bottomsheet">50dp</dimen>
+    <dimen name="margin_body">16dp</dimen>
+    <dimen name="padding_body">16dp</dimen>
+    <dimen name="button_custom_settings">70dp</dimen>
+    <dimen name="button_add_custom_settings">70dp</dimen>
+    <dimen name="elevation_tv_option">10dp</dimen>
+</resources>

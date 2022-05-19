@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottomSheetRating"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bottom_sheet_bg"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="0dp"
+    app:behavior_skipCollapsed="true"
+    app:layout_behavior="@string/bottom_sheet_behavior">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ratingContent"
+        android:elevation="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+    android:background="@drawable/bottom_sheet_bg_screenshot"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCountStars"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="36sp"
+            app:fontFamily="@font/comfortaa_bold"
+            app:layout_constraintBottom_toTopOf="@+id/imageStatus"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toStartOf="@+id/imageStar"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="12" />
+
+        <ImageView
+            android:id="@+id/imageStar"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:src="@drawable/star"
+            android:contentDescription="@string/desc_image_rating_star"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCountStars"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvCountStars"
+            app:layout_constraintTop_toTopOf="@+id/tvCountStars" />
+
+        <ImageView
+            android:id="@+id/imageStatus"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_margin="8dp"
+            android:contentDescription="@string/desc_image_rating_status"
+            app:layout_constraintBottom_toTopOf="@+id/tvStatus"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvCountStars"
+            app:srcCompat="@drawable/newstatus1" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="24sp"
+            app:fontFamily="@font/comfortaa_bold"
+            app:layout_constraintBottom_toTopOf="@+id/tvCountNextStars"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:text="НОВИЧОК" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCountNextStars"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/bottom_sheet_schema_status"
+            android:textColor="@color/text_count_stars_next_status"
+            android:textSize="16sp"
+            app:fontFamily="@font/comfortaa_bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvStatus" />
+
+        <ProgressBar
+            android:id="@+id/progressBarExp"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:progressDrawable="@drawable/progressbar_xp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvCountNextStars"
+            tools:progress="73" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvLabelCountRightAnswers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="@string/bottom_sheet_rating_all_right_answers"
+            android:textSize="16sp"
+            app:fontFamily="@font/comfortaa_bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/progressBarExp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCountRightAnswers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:gravity="center"
+            android:textSize="24sp"
+            app:fontFamily="@font/comfortaa_bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvLabelCountRightAnswers"
+            tools:text="1254" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/sectionBadge"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="gone"
+            tools:visibility="visible"
+            app:constraint_referenced_ids="guideLine, tvTitleBadge, google_play"
+           />
+
+            <View
+                android:id="@+id/guideLine"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="4dp"
+                android:background="@color/black"
+                app:layout_constraintTop_toBottomOf="@+id/tvCountRightAnswers" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTitleBadge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Учим Состав числа"
+                android:textSize="20sp"
+                app:fontFamily="@font/comfortaa_bold"
+                app:layout_constraintTop_toBottomOf="@+id/guideLine" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/google_play"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="на Google Play"
+                android:textSize="20sp"
+                app:fontFamily="@font/comfortaa_bold"
+                app:layout_constraintTop_toBottomOf="@+id/tvTitleBadge" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/buttonShare"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_level_height"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/white"
+        app:fontFamily="@font/comfortaa_bold"
+        android:backgroundTint="@android:color/holo_green_light"
+        android:text="@string/button_share"
+        app:layout_constraintTop_toBottomOf="@+id/ratingContent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.RecyclerView
 import com.xelar.legayd.mathchildrengame.data.entities.GameCustomSettings
 import com.xelar.legayd.mathchildrengame.databinding.FragmentUserCustomSettingsBinding
+import com.xelar.legayd.mathchildrengame.domain.models.GameMode
 import com.xelar.legayd.mathchildrengame.domain.models.Level
 import com.xelar.legayd.mathchildrengame.presentation.adapters.UserCustomSettingsAdapter
 import com.xelar.legayd.mathchildrengame.presentation.viewmodels.UserCustomSettingsViewModel
@@ -92,6 +93,7 @@ class UserCustomSettingsFragment : Fragment() {
         findNavController().navigate(
             UserCustomSettingsFragmentDirections.actionUserCustomSettingsToGameFragment(
                 Level.CUSTOM,
+                GameMode.CLICK,//TODO("Не забыть закодить")
                 gameCustomSettings
             )
         )

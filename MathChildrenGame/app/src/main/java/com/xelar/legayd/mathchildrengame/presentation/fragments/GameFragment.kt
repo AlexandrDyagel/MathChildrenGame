@@ -20,6 +20,7 @@ import androidx.navigation.fragment.navArgs
 import com.xelar.legayd.mathchildrengame.R
 import com.xelar.legayd.mathchildrengame.data.entities.GameCustomSettings
 import com.xelar.legayd.mathchildrengame.databinding.FragmentGameBinding
+import com.xelar.legayd.mathchildrengame.domain.models.GameMode
 import com.xelar.legayd.mathchildrengame.domain.models.GameResult
 import com.xelar.legayd.mathchildrengame.domain.models.Level
 import com.xelar.legayd.mathchildrengame.presentation.viewmodels.GameViewModel
@@ -70,8 +71,29 @@ class GameFragment : Fragment() {
         colorsBgAnswers.shuffle()
         observeViewModel()
         startGame()
+        launchGameMode(args.gameMode)
+
+        Log.d("userInfo", args.gameMode.name)
+    }
+
+    private fun launchGameMode(gameMode: GameMode) {
+        when(gameMode){
+            GameMode.CLICK -> {
+                startGameModeClick()
+            }
+            GameMode.SWIPE -> {
+                startGameModeSwipe()
+            }
+        }
+    }
+
+    private fun startGameModeSwipe() {
         setTouchListenersOptions()
         setOnDragListenerQuestion()
+    }
+
+    private fun startGameModeClick() {
+        setClickListenersOptions()
     }
 
     private fun startGame() {
@@ -83,14 +105,19 @@ class GameFragment : Fragment() {
         }
     }
 
-    private fun setTouchListenersOptions() {
+    private fun setClickListenersOptions() {
         for (tvOption in tvOptions) {
-            touchOptionListener(tvOption)
-            /* tvOption.setOnClickListener {
+             tvOption.setOnClickListener {
                  startAnimationTvQuestion(it as TextView)
                  viewModel.chooseAnswer(tvOption.text.toString().toInt())
                  setColorBackgroundAnswers()
-             }*/
+             }
+        }
+    }
+
+    private fun setTouchListenersOptions() {
+        for (tvOption in tvOptions) {
+            touchOptionListener(tvOption)
         }
     }
 

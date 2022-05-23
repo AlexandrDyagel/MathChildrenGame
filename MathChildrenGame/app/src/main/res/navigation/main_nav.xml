@@ -32,6 +32,9 @@
             app:argType="com.xelar.legayd.mathchildrengame.domain.models.Level"
             />
         <argument
+            android:name="gameMode"
+            app:argType="com.xelar.legayd.mathchildrengame.domain.models.GameMode" />
+        <argument
             android:name="gameCustomSettings"
             app:argType="com.xelar.legayd.mathchildrengame.data.entities.GameCustomSettings"
             app:nullable="true" />

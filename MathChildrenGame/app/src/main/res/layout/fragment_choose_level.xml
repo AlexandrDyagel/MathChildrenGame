@@ -7,86 +7,143 @@
     android:background="@drawable/bg_screens"
     tools:context=".presentation.fragments.ChooseLevelFragment">
 
-    <androidx.appcompat.widget.LinearLayoutCompat
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="@dimen/margin_body"
         android:orientation="vertical">
 
         <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvGameMode"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/tv_game_mode"
+            android:textSize="18sp"
+            app:fontFamily="@font/montserrat_alternates_bold"
+            app:layout_constraintEnd_toStartOf="@+id/tvClickMode"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvClickMode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/tv_click_mode"
+            android:textSize="18sp"
+            app:fontFamily="@font/montserrat_alternates_bold"
+            app:layout_constraintEnd_toStartOf="@+id/switchMode"
+            app:layout_constraintTop_toTopOf="@+id/switchMode"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/switchMode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:theme="@style/SwitchGameMode"
+            app:layout_constraintEnd_toStartOf="@+id/tvSwipeMode"
+            app:layout_constraintStart_toEndOf="@+id/tvClickMode"
+            app:layout_constraintTop_toBottomOf="@+id/tvGameMode" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSwipeMode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/tv_swipe_mode"
+            android:textSize="18sp"
+            app:fontFamily="@font/montserrat_alternates_bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/switchMode"
+            app:layout_constraintStart_toEndOf="@+id/switchMode" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSelectLevel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:text="@string/choose_level_title"
             android:textSize="24sp"
-            app:fontFamily="@font/montserrat_alternates_bold" />
+            app:fontFamily="@font/montserrat_alternates_bold"
+            app:layout_constraintTop_toBottomOf="@+id/switchMode" />
 
         <Button
             android:id="@+id/buttonLevelTest"
             android:layout_width="match_parent"
             android:layout_height="@dimen/button_level_height"
-            android:textColor="@color/white"
-            app:fontFamily="@font/comfortaa_bold"
             android:backgroundTint="@color/button_very_easy"
             android:text="@string/button_test_level"
+            android:textColor="@color/white"
             android:visibility="visible"
-
-            />
+            app:fontFamily="@font/comfortaa_bold"
+            app:layout_constraintTop_toBottomOf="@+id/tvSelectLevel" />
 
         <Button
             android:id="@+id/buttonLevelVeryEasy"
             android:layout_width="match_parent"
             android:layout_height="@dimen/button_level_height"
+            android:backgroundTint="@color/button_very_easy"
+            android:text="@string/button_very_easy_level"
             android:textColor="@color/white"
             app:fontFamily="@font/comfortaa_bold"
-            android:backgroundTint="@color/button_very_easy"
-            android:text="@string/button_very_easy_level" />
+            app:layout_constraintTop_toBottomOf="@+id/buttonLevelTest" />
 
         <Button
             android:id="@+id/buttonLevelEasy"
             android:layout_width="match_parent"
             android:layout_height="@dimen/button_level_height"
+            android:backgroundTint="@android:color/holo_green_light"
+            android:text="@string/button_easy_level"
             android:textColor="@color/white"
             app:fontFamily="@font/comfortaa_bold"
-            android:backgroundTint="@android:color/holo_green_light"
-            android:text="@string/button_easy_level" />
+            app:layout_constraintTop_toBottomOf="@+id/buttonLevelVeryEasy" />
 
         <Button
             android:id="@+id/buttonLevelNormal"
             android:layout_width="match_parent"
             android:layout_height="@dimen/button_level_height"
+            android:backgroundTint="@android:color/holo_orange_light"
+            android:text="@string/button_normal_level"
             android:textColor="@color/white"
             app:fontFamily="@font/comfortaa_bold"
-            android:backgroundTint="@android:color/holo_orange_light"
-            android:text="@string/button_normal_level" />
+            app:layout_constraintTop_toBottomOf="@+id/buttonLevelEasy" />
 
         <Button
             android:id="@+id/buttonLevelHard"
             android:layout_width="match_parent"
             android:layout_height="@dimen/button_level_height"
+            android:backgroundTint="@color/button_hard"
+            android:text="@string/button_hard_level"
             android:textColor="@color/white"
             app:fontFamily="@font/comfortaa_bold"
-            android:backgroundTint="@color/button_hard"
-            android:text="@string/button_hard_level" />
+            app:layout_constraintTop_toBottomOf="@+id/buttonLevelNormal" />
 
         <Button
             android:id="@+id/buttonLevelVeryHard"
             android:layout_width="match_parent"
             android:layout_height="@dimen/button_level_height"
+            android:backgroundTint="@android:color/holo_red_light"
+            android:text="@string/button_very_hard_level"
             android:textColor="@color/white"
             app:fontFamily="@font/comfortaa_bold"
-            android:backgroundTint="@android:color/holo_red_light"
-            android:text="@string/button_very_hard_level" />
+            app:layout_constraintTop_toBottomOf="@+id/buttonLevelHard" />
 
         <Button
             android:id="@+id/buttonLevelCustom"
             android:layout_width="match_parent"
             android:layout_height="@dimen/button_level_height"
+            android:backgroundTint="@color/button_custom_level"
+            android:text="@string/button_level_custom"
             android:textColor="@color/white"
             app:fontFamily="@font/comfortaa_bold"
-            android:backgroundTint="@color/button_custom_level"
-            android:text="@string/button_level_custom" />
+            app:layout_constraintTop_toBottomOf="@+id/buttonLevelVeryHard" />
 
-    </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <include
         android:id="@+id/incBottomSheet"

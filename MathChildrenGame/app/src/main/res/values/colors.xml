@@ -22,6 +22,8 @@
     <color name="button_retry_green_disable">#D1A4DA02</color>
     <color name="text_color">#707070</color>
 
+    <color name="tvGameModeClick">#FF8800</color>
+    <color name="tvGameModeSwipe">#99CC00</color>
 
     <array name="list_color_bg_answers">
         <item>#99CC00</item>

@@ -84,6 +84,9 @@
     <string name="tv_min_percent_of_right_answers">Мин. процент правильных ответов: %s%%</string>
     <string name="tv_game_time_in_seconds">Продолжительность игры: %s сек.</string>
     <string name="infinity_game_time">беск.</string>
+    <string name="tv_swipe_mode">свайп</string>
+    <string name="tv_click_mode">клик</string>
+    <string name="tv_game_mode">Режим игры</string>
 
 
     <!-- Статусы рейтинга --> Статусы рейтинга

@@ -1,5 +1,4 @@
 <resources xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     >
     <!-- Base application theme. -->
     <style name="Theme.MathChildrenGame" parent="Theme.MaterialComponents.Light.NoActionBar">
@@ -28,6 +27,18 @@
     <style name="DialogRatingBar" parent="Theme.AppCompat">
         <item name="colorControlNormal">@android:color/holo_green_light</item>
         <item name="colorControlActivated">@android:color/holo_orange_dark</item>
+    </style>
+
+    <!-- Тема для переключателя режима игры -->
+    <style name="SwitchGameMode" parent="Theme.AppCompat.Light">
+        <!-- активное состояние (30% прозрачности для фона) -->
+        <item name="colorControlActivated">@color/tvGameModeSwipe</item>
+
+        <!-- неактивное состояние ползунка -->
+        <item name="colorSwitchThumbNormal">@color/tvGameModeClick</item>
+
+        <!-- цвет дорожки для неактивного состояния (30% прозрачности) -->
+        <item name="android:colorForeground">@android:color/darker_gray</item>
     </style>
 
 </resources>
